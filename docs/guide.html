@@ -344,6 +344,35 @@ IMask(
     </div>
   </div>
 
+  <h4 id="ignoreCompositionState" class="section-h"><a href="#ignoreCompositionState">Ignore Composition State <kbd>since 7.6.1</kbd></a></h4>
+  <p>When enabled, ignores IME composition state and processes input events anyway. Useful for Android keyboards that incorrectly set <code>isComposing=true</code> for Latin characters, causing data loss on blur.</p>
+  <div class="form-item">
+    <label>Try typing with problematic Android keyboard (Xiaomi, Yandex Keyboard)</label>
+    <div class="input-checkbox">
+      <input id="ignoreCompositionState-mask" type="text" value="">
+      <label>
+        <input type="checkbox" name="ignoreCompositionState" id="toggle-ignoreCompositionState-mask">
+        Ignore&nbsp;composition&nbsp;state
+      </label>
+    </div>
+
+    <div class="toggle-panel">
+      <label for="ignoreCompositionState-mask-source">source</label>
+      <input id="ignoreCompositionState-mask-source" type="checkbox">
+      <div class="toggle-panel-content">
+{% highlight javascript %}
+IMask(
+  document.getElementById('ignoreCompositionState-mask'),
+  {
+    mask: '000-000-0000',
+    ignoreCompositionState: <CHECK>,
+  }
+)
+{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
   <h3 id="masked-number" class="section-h"><a href="#masked-number">Number Mask</a></h3>
   <p>Number mask restricts input to integer or decimal numbers in many ways:</p>
   <div class="toggle-panel">
@@ -1681,6 +1710,21 @@ IMask(element, { mask: Number });
     toggleSkipInvalid.addEventListener('change', function (e) {
       skipInvalidMask.updateOptions({
         skipInvalid: e.target.checked,
+      });
+    });
+
+    var ignoreCompositionStateMask = IMask(
+      document.getElementById('ignoreCompositionState-mask'),
+      {
+        mask: '000-000-0000',
+        ignoreCompositionState: false,
+      }
+    );
+
+    var toggleIgnoreCompositionState = document.getElementById('toggle-ignoreCompositionState-mask');
+    toggleIgnoreCompositionState.addEventListener('change', function (e) {
+      ignoreCompositionStateMask.updateOptions({
+        ignoreCompositionState: e.target.checked,
       });
     });
   });

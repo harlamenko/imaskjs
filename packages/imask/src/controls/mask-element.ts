@@ -68,7 +68,10 @@ abstract class MaskElement {
   /** */
   abstract bindEvents (handlers: EventHandlers): void;
   /** */
-  abstract unbindEvents (): void
+  abstract unbindEvents (): void;
+  
+  /** Sets ignore composition state option */
+  setIgnoreCompositionState? (ignoreCompositionState?: boolean): void;
 }
 
 

@@ -9,7 +9,7 @@ export
 type Falsy = false | 0 | "" | null | undefined;
 
 export
-type ReactMaskOpts = FactoryOpts & { unmask?: 'typed' | boolean };
+type ReactMaskOpts = FactoryOpts & { unmask?: 'typed' | boolean; ignoreCompositionState?: boolean };
 
 export
 type UnmaskValue<Opts extends ReactMaskOpts> =
@@ -35,6 +35,7 @@ type ReactMaskProps<
   value?: UnmaskValue<ExtractReactMaskOpts<MaskElement, Props>>;
   inputRef?: React.Ref<MaskElement>;
   ref?: React.Ref<React.ComponentType<Props>>;
+  ignoreCompositionState?: boolean;
 }
 
 const MASK_PROPS: { [key in keyof (AllFactoryStaticOpts & ReactMaskProps<InputMaskElement, AllFactoryStaticOpts>)]: any } = {
@@ -65,6 +66,7 @@ const MASK_PROPS: { [key in keyof (AllFactoryStaticOpts & ReactMaskProps<InputMa
     PropTypes.oneOf(['append', 'remove']),
   ]),
   skipInvalid: PropTypes.bool,
+  ignoreCompositionState: PropTypes.bool,
 
   // events
   onAccept: PropTypes.func,

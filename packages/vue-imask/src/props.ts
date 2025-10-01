@@ -1,5 +1,5 @@
 import { type PropType } from 'vue-demi';
-import { type FactoryOpts, type MaskedDynamicOptions } from 'imask';
+import { type FactoryOpts, type MaskedDynamicOptions, type ControlOptions } from 'imask';
 
 export default {
   // common
@@ -19,6 +19,7 @@ export default {
     validator: (value: unknown) => ['append', 'remove'].includes(value as string) || typeof value === 'boolean',
   },
   skipInvalid: { type: Boolean, required: false, default: undefined },
+  ignoreCompositionState: { type: Boolean, required: false, default: undefined },
 
   // pattern
   placeholderChar: String,

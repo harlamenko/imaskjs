@@ -34,6 +34,14 @@ type FactoryStaticOpts =
 ;
 
 export
+type ControlOptions = {
+  /**
+   * When true, ignore IME composition state and process input events anyway.
+   */
+  ignoreCompositionState?: boolean,
+};
+
+export
 type AllFactoryStaticOpts =
   & MaskedDateFactoryOptions
   & MaskedNumberOptions
@@ -43,6 +51,7 @@ type AllFactoryStaticOpts =
   & MaskedFunctionOptions
   & MaskedEnumOptions
   & MaskedRangeOptions
+  & ControlOptions
 ;
 
 export

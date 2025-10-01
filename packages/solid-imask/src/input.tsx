@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-namespace */
 import { JSX } from 'solid-js/jsx-runtime';
 import { createEffect, onCleanup, splitProps } from 'solid-js';
-import IMask, { type InputMask, type FactoryArg } from 'imask';
+import IMask, { type InputMask, type FactoryArg, type ControlOptions } from 'imask';
 
 
 // TODO can `directive` be reused here?
@@ -9,7 +9,7 @@ import IMask, { type InputMask, type FactoryArg } from 'imask';
 
 const createMaskedInput =
 <
-  Opts extends FactoryArg,
+  Opts extends FactoryArg & ControlOptions,
   Value = {
     typedValue: InputMask<Opts>['typedValue'];
     value: InputMask<Opts>['value'];

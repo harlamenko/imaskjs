@@ -15,6 +15,7 @@ export {
   default as createMask,
   normalizeOpts,
   type AllFactoryStaticOpts,
+  type ControlOptions,
   type FactoryArg,
   type FactoryConstructorOpts,
   type FactoryConstructorReturnMasked,

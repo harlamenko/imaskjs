@@ -1,13 +1,13 @@
-import IMask, { type FactoryArg, type InputMask, type UpdateOpts } from 'imask';
+import IMask, { type FactoryArg, type InputMask, type UpdateOpts, type ControlOptions } from 'imask';
 
 
-function fireEvent<Opts extends FactoryArg> (el: HTMLElement, eventName: string, data: InputMask<Opts>) {
+function fireEvent<Opts extends FactoryArg & ControlOptions> (el: HTMLElement, eventName: string, data: InputMask<Opts>) {
   const e = document.createEvent('CustomEvent');
   e.initCustomEvent(eventName, true, true, data);
   el.dispatchEvent(e);
 }
 
-function initMask<Opts extends FactoryArg> (el: HTMLElement, opts: InputMask<Opts> | Opts): InputMask<Opts> {
+function initMask<Opts extends FactoryArg & ControlOptions> (el: HTMLElement, opts: InputMask<Opts> | Opts): InputMask<Opts> {
   const maskRef = (opts instanceof IMask.InputMask ? opts : IMask(el, opts as Opts));
   return maskRef
     .on('accept', () => fireEvent(el, 'accept', maskRef))
@@ -16,7 +16,7 @@ function initMask<Opts extends FactoryArg> (el: HTMLElement, opts: InputMask<Opt
 
 
 export default
-function IMaskAction<Opts extends FactoryArg> (el: HTMLElement, opts: Opts) {
+function IMaskAction<Opts extends FactoryArg & ControlOptions> (el: HTMLElement, opts: Opts) {
   let maskRef: InputMask<Opts> | undefined;
   let created: boolean | undefined;
 

@@ -10,7 +10,9 @@ export default
 abstract class HTMLMaskElement extends MaskElement {
   /** HTMLElement to use mask on */
   declare input: HTMLElement;
-  declare _handlers: EventHandlers;
+  declare ignoreCompositionState?: boolean;
+  declare _handlers: EventHandlers;  
+  
   abstract value: string;
 
   constructor (input: HTMLElement) {
@@ -58,7 +60,7 @@ abstract class HTMLMaskElement extends MaskElement {
       return this._handlers.undo(e);
     }
 
-    if (!e.isComposing) this._handlers.selectionChange(e);
+    if (this.ignoreCompositionState || !e.isComposing) this._handlers.selectionChange(e);
   }
 
   _onBeforeinput (e: InputEvent) {
@@ -78,7 +80,13 @@ abstract class HTMLMaskElement extends MaskElement {
   }
 
   _onInput (e: InputEvent) {
-    if (!e.isComposing) this._handlers.input(e);
+    if (this.ignoreCompositionState || !e.isComposing) this._handlers.input(e);
+  }
+
+  setIgnoreCompositionState (ignoreCompositionState?: boolean) {
+    if (typeof ignoreCompositionState !== 'undefined') {
+      this.ignoreCompositionState = Boolean(ignoreCompositionState);
+    }
   }
 
   /** Unbinds HTMLElement events to mask internal events */

@@ -1,6 +1,6 @@
 import { DIRECTION, type Selection } from '../core/utils';
 import ActionDetails from '../core/action-details';
-import createMask, { type UpdateOpts, maskedClass, type FactoryArg, type FactoryReturnMasked } from '../masked/factory';
+import createMask, { type UpdateOpts, maskedClass, type FactoryArg, type FactoryReturnMasked, type ControlOptions } from '../masked/factory';
 import Masked from '../masked/base';
 import MaskElement from './mask-element';
 import HTMLInputMaskElement, { type InputElement } from './html-input-mask-element';
@@ -63,6 +63,7 @@ class InputMask<Opts extends FactoryArg=Record<string, unknown>> {
     this.alignCursorFriendly = this.alignCursorFriendly.bind(this);
 
     this._bindEvents();
+    this._setIgnoreCompositionState((opts as Opts & ControlOptions)?.ignoreCompositionState);
 
     // refresh
     this.updateValue();
@@ -164,6 +165,10 @@ class InputMask<Opts extends FactoryArg=Record<string, unknown>> {
     if (this.el) this.el.unbindEvents();
   }
 
+  _setIgnoreCompositionState (ignoreCompositionState?: boolean) {
+    this.el.setIgnoreCompositionState?.(ignoreCompositionState);
+  }
+
   /** Fires custom event */
   _fireEvent (ev: string, e?: InputEvent) {
     const listeners = this._listeners[ev];
@@ -244,7 +249,7 @@ class InputMask<Opts extends FactoryArg=Record<string, unknown>> {
 
   /** Updates options with deep equal check, recreates {@link Masked} model if mask type changes */
   updateOptions(opts: UpdateOpts<Opts>) {
-    const { mask, ...restOpts } = opts as any; // TODO types, yes, mask is optional
+    const { mask, ignoreCompositionState, ...restOpts } = opts as any; // TODO types, yes, mask is optional
 
     const updateMask = !this.maskEquals(mask);
     const updateOpts = this.masked.optionsIsChanged(restOpts);
@@ -253,6 +258,7 @@ class InputMask<Opts extends FactoryArg=Record<string, unknown>> {
     if (updateOpts) this.masked.updateOptions(restOpts);  // TODO
 
     if (updateMask || updateOpts) this.updateControl();
+    this._setIgnoreCompositionState(ignoreCompositionState);
   }
 
   /** Updates cursor */
