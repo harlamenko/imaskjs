@@ -1,6 +1,6 @@
 {
   "name": "@bsolute/imask-react",
-  "version": "7.6.1",
+  "version": "7.7.0",
   "license": "MIT",
   "author": "Alexey Kryazhev",
   "homepage": "https://harlamenko.github.io/imaskjs/",
@@ -61,8 +61,8 @@
     "mask"
   ],
   "dependencies": {
-    "prop-types": "^15.8.1",
-    "@bsolute/imask": "^7.6.1"
+    "@bsolute/imask": "^7.7.0",
+    "prop-types": "^15.8.1"
   },
   "peerDependencies": {
     "react": ">=0.14.0"
