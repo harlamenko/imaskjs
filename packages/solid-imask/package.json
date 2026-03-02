@@ -1,6 +1,6 @@
 {
   "name": "@bsolute/imask-solid",
-  "version": "7.7.1",
+  "version": "7.7.2",
   "license": "MIT",
   "author": "Alexey Kryazhev",
   "description": "Solid input mask",
