@@ -1,5 +1,5 @@
 import { ref, readonly, isRef, watch, onMounted, onUnmounted, type DeepReadonly, type Ref } from 'vue-demi';
-import IMask, { type FactoryOpts, type InputMaskElement, type InputMask } from 'imask';
+import IMask, { type FactoryOpts, type InputMaskElement, type InputMask } from '@bsolute/imask';
 
 export
 type ComposableEmitEventBase = 'accept' | 'complete';

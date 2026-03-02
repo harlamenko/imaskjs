@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IMask, { type InputMask, type InputMaskElement, type FactoryOpts, type AllFactoryStaticOpts } from 'imask';
+import IMask, { type InputMask, type InputMaskElement, type FactoryOpts, type AllFactoryStaticOpts } from '@bsolute/imask';
 
 
 type AnyProps = Record<string, unknown>;

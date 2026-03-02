@@ -19,7 +19,7 @@
       "@angular/*": [
         "node_modules/@angular/*"
       ],
-      "imask": [
+      "@bsolute/imask": [
         "../imask"
       ],
       "angular-imask": [

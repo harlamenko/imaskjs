@@ -1,4 +1,4 @@
-import IMask, { type InputElement, type InputMask, type FactoryArg, type UpdateOpts } from 'imask';
+import IMask, { type InputElement, type InputMask, type FactoryArg, type UpdateOpts } from '@bsolute/imask';
 import { isVue3 } from 'vue-demi';
 
 

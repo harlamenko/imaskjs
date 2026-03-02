@@ -1,4 +1,4 @@
-export { default as IMask } from 'imask';
+export { default as IMask } from '@bsolute/imask';
 export * from './imask.directive';
 export * from './imask.pipe';
 export * from './imask.module';

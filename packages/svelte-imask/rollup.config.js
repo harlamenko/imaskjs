@@ -38,15 +38,15 @@ export default [
   },
   {
     input,
-    external: [...Object.keys(globals), 'imask/esm', 'imask/esm/imask'],
+    external: [...Object.keys(globals), '@bsolute/imask/esm', '@bsolute/imask/esm/imask'],
     output: {
       format: 'esm',
       dir: 'esm',
     },
     plugins: [
       replace({
-        "import IMask from 'imask'": "import IMask from 'imask/esm/imask'",
-        "import 'imask'": "import 'imask/esm'",
+        "import IMask from '@bsolute/imask'": "import IMask from '@bsolute/imask/esm/imask'",
+        "import '@bsolute/imask'": "import '@bsolute/imask/esm'",
         delimiters: ['', ''],
       }),
       multi.default(),

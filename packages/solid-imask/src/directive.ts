@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-namespace */
 import { JSX } from 'solid-js/jsx-runtime';
 import { createEffect } from 'solid-js';
-import IMask, { type InputMask, type FactoryArg } from 'imask';
+import IMask, { type InputMask, type FactoryArg } from '@bsolute/imask';
 
 interface SolidMaskedDirectiveInterface<
   Opts extends FactoryArg,

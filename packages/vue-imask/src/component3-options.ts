@@ -1,4 +1,4 @@
-import IMask, { type InputMask, type FactoryOpts } from 'imask';
+import IMask, { type InputMask, type FactoryOpts } from '@bsolute/imask';
 import { h, defineComponent, type PropType } from 'vue-demi';
 import props from './props';
 import { extractOptionsFromProps } from './utils';

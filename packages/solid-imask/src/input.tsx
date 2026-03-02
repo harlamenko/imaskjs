@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-namespace */
 import { JSX } from 'solid-js/jsx-runtime';
 import { createEffect, onCleanup, splitProps } from 'solid-js';
-import IMask, { type InputMask, type FactoryArg, type ControlOptions } from 'imask';
+import IMask, { type InputMask, type FactoryArg, type ControlOptions } from '@bsolute/imask';
 
 
 // TODO can `directive` be reused here?

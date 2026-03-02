@@ -1,4 +1,4 @@
-import IMask, { type FactoryArg, type InputMask, type UpdateOpts, type ControlOptions } from 'imask';
+import IMask, { type FactoryArg, type InputMask, type UpdateOpts, type ControlOptions } from '@bsolute/imask';
 
 
 function fireEvent<Opts extends FactoryArg & ControlOptions> (el: HTMLElement, eventName: string, data: InputMask<Opts>) {

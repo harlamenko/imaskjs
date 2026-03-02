@@ -8,7 +8,7 @@
     "declarationMap": true,
     "declarationDir": "esm",
     "paths": {
-      "imask": [
+      "@bsolute/imask": [
         "../imask"
       ]
     },

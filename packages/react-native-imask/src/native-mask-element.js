@@ -1,4 +1,4 @@
-import { MaskElement } from 'imask';
+import { MaskElement } from '@bsolute/imask';
 
 
 export default

@@ -1,4 +1,4 @@
-import IMask, { type InputMask, type InputMaskElement, type FactoryOpts } from 'imask';
+import IMask, { type InputMask, type InputMaskElement, type FactoryOpts } from '@bsolute/imask';
 import { useEffect, useCallback, useState, useRef, Dispatch } from 'react';
 import type { MutableRefObject } from 'react';
 

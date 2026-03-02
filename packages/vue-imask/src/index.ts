@@ -1,5 +1,5 @@
-import 'imask';
-export { default as IMask } from 'imask';
+import '@bsolute/imask';
+export { default as IMask } from '@bsolute/imask';
 export { default as IMaskComponent } from './component';
 export { default as IMaskDirective } from './directive';
 export { default as useIMask,

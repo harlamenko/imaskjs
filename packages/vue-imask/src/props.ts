@@ -1,5 +1,5 @@
 import { type PropType } from 'vue-demi';
-import { type FactoryOpts, type MaskedDynamicOptions, type ControlOptions } from 'imask';
+import { type FactoryOpts, type MaskedDynamicOptions, type ControlOptions } from '@bsolute/imask';
 
 export default {
   // common

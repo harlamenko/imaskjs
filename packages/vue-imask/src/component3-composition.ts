@@ -1,4 +1,4 @@
-import { type FactoryOpts } from 'imask';
+import { type FactoryOpts } from '@bsolute/imask';
 import { h, watch, toRef, defineComponent, PropType } from 'vue-demi';
 import props from './props';
 import useIMask, { type ComposableParams } from './composable';

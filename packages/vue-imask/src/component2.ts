@@ -1,5 +1,5 @@
 import { Vue2, type VNode } from 'vue-demi';
-import IMask, { type InputMask, type FactoryOpts } from 'imask';
+import IMask, { type InputMask, type FactoryOpts } from '@bsolute/imask';
 import props from './props';
 import { extractOptionsFromProps } from './utils';
 

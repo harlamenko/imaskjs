@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { pipe, type FactoryArg } from 'imask';
-export { PIPE_TYPE, pipe } from 'imask';
+import { pipe, type FactoryArg } from '@bsolute/imask';
+export { PIPE_TYPE, pipe } from '@bsolute/imask';
 
 
 /*

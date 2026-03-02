@@ -1,4 +1,4 @@
-import { type InputMask, type InputMaskElement, type FactoryArg, type UpdateOpts, type ControlOptions } from 'imask';
+import { type InputMask, type InputMaskElement, type FactoryArg, type UpdateOpts, type ControlOptions } from '@bsolute/imask';
 import { isPlatformBrowser } from '@angular/common';
 import {
   Directive, ElementRef, Input, Output, forwardRef, Provider, Renderer2,

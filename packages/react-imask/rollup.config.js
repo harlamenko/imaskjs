@@ -43,15 +43,15 @@ export default [
   },
   {
     input,
-    external: [...Object.keys(globals), 'imask/esm', 'imask/esm/imask'],
+    external: [...Object.keys(globals), '@bsolute/imask/esm', '@bsolute/imask/esm/imask'],
     output: {
       format: 'esm',
       dir: 'esm',
     },
     plugins: [
       replace({
-        "from 'imask'": "from 'imask/esm/imask'",
-        "import 'imask'": "import 'imask/esm'",
+        "from '@bsolute/imask'": "from '@bsolute/imask/esm/imask'",
+        "import '@bsolute/imask'": "import '@bsolute/imask/esm'",
         delimiters: ['', ''],
         preventAssignment: true,
       }),

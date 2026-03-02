@@ -1,4 +1,4 @@
-import IMask, { type InputMaskElement, type FactoryArg, type InputMask } from 'imask';
+import IMask, { type InputMaskElement, type FactoryArg, type InputMask } from '@bsolute/imask';
 import { Injectable } from '@angular/core';
 import { IMaskFactory } from './imask-factory';
 
