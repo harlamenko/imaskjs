@@ -1,5 +1,5 @@
 {
-  "name": "@imask/svelte",
+  "name": "@bsolute/imask-svelte",
   "author": "Alexey Kryazhev",
   "license": "MIT",
   "version": "7.6.1",
@@ -8,7 +8,7 @@
   "module": "esm/index.js",
   "type": "module",
   "types": "index.d.ts",
-  "repository": "https://github.com/uNmAnNeR/imaskjs/tree/master/packages/svelte-imask",
+  "repository": "https://github.com/harlamenko/imaskjs/tree/master/packages/svelte-imask",
   "scripts": {
     "lint": "eslint src",
     "prebuild": "npm run lint -- --quiet && rimraf --glob \"{dist,esm}\"",
@@ -60,7 +60,7 @@
     "mask"
   ],
   "dependencies": {
-    "imask": "^7.6.1"
+    "@bsolute/imask": "^7.6.1"
   },
   "peerDependencies": {
     "svelte": "^4.2.17"

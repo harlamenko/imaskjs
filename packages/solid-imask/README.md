@@ -1,8 +1,8 @@
 # Solid IMask Plugin
 
-solid-imask
+@bsolute/imask-solid
 
-[![npm version](https://badge.fury.io/js/react-imask.svg)](https://badge.fury.io/js/react-imask)
+[![npm version](https://badge.fury.io/js/%40bsolute%2Fimask-solid.svg)](https://badge.fury.io/js/%40bsolute%2Fimask-solid)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <a href="https://opencollective.com/imask/donate" target="_blank">
@@ -11,12 +11,12 @@ solid-imask
 
 ## Install
 
-`npm install solid-imask`
+`npm install @bsolute/imask-solid`
 
 ## Mask Input Example
 
 ```javascript
-import { createMaskedInput } from "solid-imask";
+import { createMaskedInput } from "@bsolute/imask-solid";
 
 const NumberInput = createMaskedInput({
   mask: "+{7}(000)000-00-00",
@@ -43,7 +43,7 @@ const App = () => {
 ## Mask Directive Example
 
 ```javascript
-import { masked } from "solid-imask";
+import { masked } from "@bsolute/imask-solid";
 
 const mask = {
   mask: "+{7}(000)000-00-00",

@@ -1,7 +1,7 @@
 # React IMask Plugin
-react-imask
+@bsolute/imask-react
 
-[![npm version](https://badge.fury.io/js/react-imask.svg)](https://badge.fury.io/js/react-imask)
+[![npm version](https://badge.fury.io/js/%40bsolute%2Fimask-react.svg)](https://badge.fury.io/js/%40bsolute%2Fimask-react)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <a href="https://opencollective.com/imask/donate" target="_blank">
@@ -9,12 +9,12 @@ react-imask
 </a>
 
 ## Install
-`npm install react-imask`
+`npm install @bsolute/imask-react`
 
 ## Mask Input Example
 ```javascript
 import { useRef } from 'react';
-import { IMaskInput } from 'react-imask';
+import { IMaskInput } from '@bsolute/imask-react';
 
 // use ref to get access to internal "masked = ref.current.maskRef"
 const ref = useRef(null);
@@ -44,7 +44,7 @@ const inputRef = useRef(null);
 
 ## Extend Existing Components
 ```javascript
-import { IMaskMixin } from 'react-imask';
+import { IMaskMixin } from '@bsolute/imask-react';
 
 // extend style component
 const StyledInput = styled.input`
@@ -67,12 +67,12 @@ const MaskedStyledInput = IMaskMixin(({inputRef, ...props}) => (
   // ...other styled props
 />
 ```
-More options see in a [guide](https://imask.js.org/guide.html).
+More options see in a [guide](https://harlamenko.github.io/imaskjs/guide.html).
 
 ## Using hook
 ```javascript
 import { useState } from 'react';
-import { useIMask } from 'react-imask';
+import { useIMask } from '@bsolute/imask-react';
 
 function IMaskWithHook () {
   const [ opts, setOpts ] = useState({ mask: Number });

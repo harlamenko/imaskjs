@@ -30,8 +30,8 @@ jobs:
       - name: Install node
         uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
-          cache: 'npm'
+          node-version: "24"
+          cache: "npm"
       - run: npm ci
       - run: npm run make
       - run: npm run coverage
@@ -63,3 +63,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+

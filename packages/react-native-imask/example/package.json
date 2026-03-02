@@ -13,9 +13,9 @@
     "expo": "~36.0.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
-    "react-imask": "file:../../react-imask",
+    "@bsolute/imask-react": "file:../../react-imask",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
-    "react-native-imask": "file:..",
+    "@bsolute/imask-react-native": "file:..",
     "react-native-web": "~0.11.7"
   },
   "devDependencies": {

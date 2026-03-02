@@ -1,7 +1,7 @@
 # Svelte IMask Plugin
-@imask/svelte
+@bsolute/imask-svelte
 
-[![npm version](https://badge.fury.io/js/%40imask%2Fsvelte.svg)](https://badge.fury.io/js/%40imask%2Fsvelte)
+[![npm version](https://badge.fury.io/js/%40bsolute%2Fimask-svelte.svg)](https://badge.fury.io/js/%40bsolute%2Fimask-svelte)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <a href="https://opencollective.com/imask/donate" target="_blank">
@@ -9,7 +9,7 @@
 </a>
 
 ## Install
-`npm install @imask/svelte`
+`npm install @bsolute/imask-svelte`
 
 ## Mask Action Example
 ```html
@@ -21,7 +21,7 @@
 >
 
 <script>
-  import { imask } from '@imask/svelte';
+  import { imask } from '@bsolute/imask-svelte';
 
   const options = {
     mask: '{8}000000',
@@ -40,7 +40,7 @@
   }
 </script>
 ```
-More options see in a [guide](https://imask.js.org/guide.html).
+More options see in a [guide](https://harlamenko.github.io/imaskjs/guide.html).
 
 ## Input Mask Component
 Currently plugin does not have component for input with 2-way binding support because it is not possible to pass all event listeners to child ([issue](https://github.com/sveltejs/svelte/issues/2837)).

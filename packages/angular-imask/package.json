@@ -1,10 +1,10 @@
 {
-  "name": "angular-imask",
+  "name": "@bsolute/imask-angular",
   "author": "Alexey Kryazhev",
   "license": "MIT",
   "version": "7.6.1",
   "description": "Angular IMask Plugin",
-  "repository": "https://github.com/uNmAnNeR/imaskjs/tree/master/packages/angular-imask",
+  "repository": "https://github.com/harlamenko/imaskjs/tree/master/packages/angular-imask",
   "scripts": {
     "lint": "eslint src",
     "prebuild": "npm run lint -- --quiet && rimraf --glob \"dist\"",
@@ -36,11 +36,12 @@
     "zone.js": "^0.13.3"
   },
   "dependencies": {
-    "imask": "^7.6.1",
-    "tslib": "^2.6.2"
+    "tslib": "^2.6.2",
+    "@bsolute/imask": "^7.6.1"
   },
   "publishConfig": {
-    "directory": "dist"
+    "directory": "dist",
+    "access": "public"
   },
   "gitHead": "228f2a4dce7125d0c7156868fcb5364b4487c8e6"
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IMaskMixin } from 'react-imask';
+import { IMaskMixin } from '@bsolute/imask-react';
 import NativeMaskElement from './native-mask-element';
 
 

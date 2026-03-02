@@ -9,9 +9,9 @@ const extensions = ['.js', '.ts'];
 const globals = {
   react: 'React',
   'react-native': 'ReactNative',
-  'react-imask': 'ReactIMask',
+  '@bsolute/imask-react': 'ReactIMask',
   'prop-types': 'PropTypes',
-  'imask': 'IMask',
+  '@bsolute/imask': 'IMask',
 };
 const babelConfig = {
   extensions,
@@ -42,9 +42,9 @@ export default [
     },
     plugins: [
       replace({
-        "import 'imask'": "import 'imask/esm'",
-        "import IMaskMixin from 'react-imask'": "import IMaskMixin from 'react-imask/esm/mixin'",
-        "import MaskElement from 'imask'": "import MaskElement from 'imask/esm/controls/mask-element'",
+        "import '@bsolute/imask'": "import '@bsolute/imask/esm'",
+        "import IMaskMixin from '@bsolute/imask-react'": "import IMaskMixin from '@bsolute/imask-react/esm/mixin'",
+        "import MaskElement from '@bsolute/imask'": "import MaskElement from '@bsolute/imask/esm/controls/mask-element'",
         delimiters: ['', ''],
       }),
       multi.default(),

@@ -1,7 +1,7 @@
 # Vue IMask Plugin
-vue-imask
+@bsolute/imask-vue
 
-[![npm version](https://badge.fury.io/js/vue-imask.svg)](https://badge.fury.io/js/vue-imask)
+[![npm version](https://badge.fury.io/js/%40bsolute%2Fimask-vue.svg)](https://badge.fury.io/js/%40bsolute%2Fimask-vue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <a href="https://opencollective.com/imask/donate" target="_blank">
@@ -9,7 +9,7 @@ vue-imask
 </a>
 
 ## Install
-`npm i vue-imask`
+`npm i @bsolute/imask-vue`
 
 for Vue 2 also do:
 
@@ -43,7 +43,7 @@ And then add `@nuxtjs/composition-api/module` in the buildModules option in your
 </template>
 
 <script>
-  import { IMaskComponent } from 'vue-imask';
+  import { IMaskComponent } from '@bsolute/imask-vue';
 
   export default {
     data () {
@@ -85,7 +85,7 @@ And then add `@nuxtjs/composition-api/module` in the buildModules option in your
 </template>
 
 <script>
-  import { IMaskComponent } from 'vue-imask';
+  import { IMaskComponent } from '@bsolute/imask-vue';
 
   export default {
     data () {
@@ -118,7 +118,7 @@ In some cases value bindings (`v-model`) might not work for directive, you can u
 </template>
 
 <script>
-  import { IMaskDirective } from 'vue-imask';
+  import { IMaskDirective } from '@bsolute/imask-vue';
 
   export default {
     data () {
@@ -147,7 +147,7 @@ In some cases value bindings (`v-model`) might not work for directive, you can u
   }
 </script>
 ```
-More options see in a [guide](https://imask.js.org/guide.html).
+More options see in a [guide](https://harlamenko.github.io/imaskjs/guide.html).
 
 ## Mask Composable (Vue 3)
 ```html
@@ -156,7 +156,7 @@ More options see in a [guide](https://imask.js.org/guide.html).
 </template>
 
 <script>
-  import { useIMask } from 'vue-imask';
+  import { useIMask } from '@bsolute/imask-vue';
 
   export default {
     setup (props) {

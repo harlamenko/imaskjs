@@ -1,8 +1,8 @@
 
 # React Native IMask Plugin
-react-native-imask
+@bsolute/imask-react-native
 
-[![npm version](https://badge.fury.io/js/react-native-imask.svg)](https://badge.fury.io/js/react-native-imask)
+[![npm version](https://badge.fury.io/js/%40bsolute%2Fimask-react-native.svg)](https://badge.fury.io/js/%40bsolute%2Fimask-react-native)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <a href="https://opencollective.com/imask/donate" target="_blank">
@@ -16,11 +16,11 @@ react-native-imask
 > Any PRs are welcomed.
 
 ## Install
-`npm install react-native-imask`
+`npm install @bsolute/imask-react-native`
 
 ## Masked TextInput Example
 ```javascript
-import {IMaskTextInput} from 'react-native-imask';
+import {IMaskTextInput} from '@bsolute/imask-react-native';
 
 <IMaskTextInput
   mask={Number}
@@ -49,7 +49,7 @@ import {IMaskTextInput} from 'react-native-imask';
 
 ## Extend Existing Components
 ```javascript
-import {IMaskNativeMixin} from 'react-native-imask';
+import {IMaskNativeMixin} from '@bsolute/imask-react-native';
 
 // use `inputRef` to get reference for our custom text input component
 const InputComponent = ({inputRef, ...props}) => (
@@ -69,4 +69,4 @@ const IMaskTextInput = IMaskNativeMixin(InputComponent);
 />
 ```
 
-More options see in a [guide](https://imask.js.org/guide.html).
+More options see in a [guide](https://harlamenko.github.io/imaskjs/guide.html).

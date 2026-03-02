@@ -1,7 +1,7 @@
 # Angular IMask Plugin
-angular-imask
+@bsolute/imask-angular
 
-[![npm version](https://badge.fury.io/js/angular-imask.svg)](https://badge.fury.io/js/angular-imask)
+[![npm version](https://badge.fury.io/js/%40bsolute%2Fimask-angular.svg)](https://badge.fury.io/js/%40bsolute%2Fimask-angular)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <a href="https://opencollective.com/imask/donate" target="_blank">
@@ -9,11 +9,11 @@ angular-imask
 </a>
 
 ## Install
-`npm install angular-imask`
+`npm install @bsolute/imask-angular`
 
 ## Setup
 ```javascript
-import { IMaskModule } from 'angular-imask';
+import { IMaskModule } from '@bsolute/imask-angular';
 
 @NgModule({
   imports: [
@@ -42,7 +42,7 @@ import { IMaskModule } from 'angular-imask';
 <!-- pipe -->
 <p>{{ value | imask:mask }}</p>
 ```
-More options see in a [guide](https://imask.js.org/guide.html).
+More options see in a [guide](https://harlamenko.github.io/imaskjs/guide.html).
 
 ## Development
 As to make changes to this package follow the steps:

@@ -5,17 +5,17 @@ title: Input Mask Guide
 {% include guide_header.html %}
 <main>
   <h2 id="getting-started" class="section-h"><a href="#getting-started">Getting Started</a></h2>
-  <p>Install from <a href="https://www.npmjs.com/package/imask">npm</a>:</p>
+  <p>Install from <a href="https://www.npmjs.com/package/@bsolute/imask">npm</a>:</p>
 {% highlight shell %}
-npm install imask
+npm install @bsolute/imask
 {% endhighlight %}
   <p>And import or require:</p>
 {% highlight shell %}
-import IMask from 'imask';
+import IMask from '@bsolute/imask';
 {% endhighlight %}
   <p>or use CDN:</p>
 {% highlight html %}
-<script src="https://unpkg.com/imask"></script>
+<script src="https://unpkg.com/@bsolute/imask"></script>
 {% endhighlight %}
   <p>Simple use case:</p>
   <div class="toggle-panel">
@@ -1181,7 +1181,7 @@ IMask.pipe(
   <fieldset>
     <strong>Note:</strong> it is possible to share single <code>Masked</code> instance both for input handling and formatting with <code>pipe</code>. Just pass <code>Masked</code> to <code>pipe</code> instead of mask options. In that case <code>pipe</code> will not create or clone <code>Masked</code> instance, <code>Masked</code> state also will not be changed during formatting.
   </fieldset>
-  <p><a href="https://github.com/uNmAnNeR/imaskjs/tree/master/packages/angular-imask">Angular plugin</a> provides <code>IMaskPipe</code> for convinience.</p>
+  <p><a href="https://www.npmjs.com/package/@bsolute/imask-angular">Angular plugin</a> provides <code>IMaskPipe</code> for convinience.</p>
 
 
   <h2 id="advanced" class="section-h"><a href="#advanced">Advanced</a></h2>
@@ -1189,7 +1189,7 @@ IMask.pipe(
   <p><code>IMask</code> contains a lot of cool features, which makes it pretty big in size. But you might not need all features and want to reduce your bundle size. Since v6.0.0 <code>IMask</code> provides such possibility and ships chunks along side with assembled bundle. Despite mask has been already support esm modules treeshaking did not work on it because of recursive masks and therefore circular dependencies inside. So now you can import only features that you want, for instance if only number mask is used:</p>
 {% highlight javascript %}
 // was before
-// import IMask from 'imask'; // imports all modules
+// import IMask from '@bsolute/imask'; // imports all modules
 
 // enable treeshaking
 import IMask from 'imask/holder'; // imports only factory
@@ -1203,7 +1203,7 @@ IMask(element, { mask: Number });
 </main>
 
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-<script defer src="https://unpkg.com/imask"></script>
+<script defer src="https://unpkg.com/@bsolute/imask"></script>
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function () {
     var startPhoneMask = IMask(document.getElementById('start-phone-mask'), {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IMASK_FACTORY } from 'angular-imask';
-import { IMaskModule } from 'angular-imask';
+import { IMASK_FACTORY } from '@bsolute/imask-angular';
+import { IMaskModule } from '@bsolute/imask-angular';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 
 @Component({

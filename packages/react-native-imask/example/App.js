@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { IMaskTextInput } from 'react-native-imask';
-import 'imask/esm';
+import { IMaskTextInput } from '@bsolute/imask-react-native';
+import '@bsolute/imask/esm';
 
 
 export default
